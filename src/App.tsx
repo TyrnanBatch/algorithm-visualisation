@@ -4,9 +4,11 @@ import './App.css';
 function App() {
     return (
         <>
-            Hello World
+            <div className={"main-container"}>
+                Hello World
+            </div>
         </>
     );
 }
 
-export default App;
+    export default App;
