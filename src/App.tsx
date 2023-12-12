@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-function App() {
+export default function App() {
     return (
         <>
             <div className={"main-container"}>
@@ -10,5 +10,3 @@ function App() {
         </>
     );
 }
-
-    export default App;
