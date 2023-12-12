@@ -2,15 +2,15 @@ import './Bar.css';
 import React from 'react';
 
 interface BarProps {
-    height: string;
-    width: string;
+    height: number;
+    width: number;
 }
 
-export default function Bar (props : BarProps) {
+export default function Bar (props : BarProps){
     return (
         <>
             <div
-                style={{width: `${props.width}px`, height: `${props.height}px`}}
+                style={{width: `${String(props.width)}px`, height: `${String(props.height)}px`}}
             />
         </>
     )

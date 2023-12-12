@@ -1,9 +1,10 @@
-import 'Bars.css'
+import './Bars.css'
 import React from "react";
-import Bar from '../bar';
+import Bar from '../bar/Bar'
 
-const data : BarProp = [
-    {}
+let data: number[][] = [
+    [20, 200],
+    [12, 100]
 ]
 
 export default class Bars extends React.Component {
@@ -11,13 +12,17 @@ export default class Bars extends React.Component {
 
         let bars = (
             <>
-
+                {
+                    data.map(function (val : number[]) {
+                        return <Bar width={val[0]} height={val[1]}/>
+                    })
+                }
             </>
         )
 
         return (
             <div className={"main-container"}>
-                Bars
+                {bars}
             </div>
         );
     }
