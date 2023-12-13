@@ -13,5 +13,5 @@ export default function Bar(props: BarProps): JSX.Element {
                 style={{width: `${String(props.width)}%`, height: `${String(props.height)}px`}}
             />
         </>
-    )
-}
+    );
+};
