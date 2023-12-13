@@ -6,11 +6,11 @@ interface BarProps {
     width: number;
 }
 
-export default function Bar(props: BarProps): JSX.Element {
+export default function Bar(props: BarProps): React.ReactElement {
     return (
         <>
             <div
-                style={{width: `${String(props.width)}%`, height: `${String(props.height)}px`}}
+                style={{width: `${String(props.width)}%`, height: `${String(props.height)}%`}}
             />
         </>
     );
