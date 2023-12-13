@@ -6,7 +6,7 @@ interface BarProps {
     width: number;
 }
 
-export default function Bar (props : BarProps){
+export default function Bar (props : BarProps) : JSX.Element{
     return (
         <>
             <div

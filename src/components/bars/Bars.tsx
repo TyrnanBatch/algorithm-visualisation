@@ -8,9 +8,9 @@ let data: number[][] = [
 ]
 
 export default class Bars extends React.Component {
-    render() {
+    render() : JSX.Element {
 
-        let bars = (
+        let bars  : JSX.Element = (
             <>
                 {
                     data.map(function (val : number[]) {
