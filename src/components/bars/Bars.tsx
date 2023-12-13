@@ -2,19 +2,17 @@ import './Bars.css'
 import React from "react";
 import Bar from '../bar/Bar'
 
-let data: number[][] = [
-    [20, 200],
-    [12, 100]
+let data: number[] = [
+    100, 150, 200
 ]
 
 export default class Bars extends React.Component {
-    render() : JSX.Element {
-
-        let bars  : JSX.Element = (
+    render() {
+        let bars: JSX.Element = (
             <>
                 {
-                    data.map(function (val : number[]) {
-                        return <Bar width={val[0]} height={val[1]}/>
+                    data.map(function (val: number) {
+                        return <Bar width={100 / data.length} height={val}/>
                     })
                 }
             </>
