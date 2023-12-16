@@ -4,10 +4,12 @@ import Bar from '../bar/Bar';
 import Insertion from "../../algorithms/Insertion";
 
 export default function Bars(): React.ReactElement {
+    // Temporary data to test with as no input for data has been made
     let data: number[] = [
         367, 872, 654, 123, 409, 789, 234, 567, 890, 432, 678, 987, 321, 555, 876, 234, 456, 789, 100, 888
     ];
 
+    // Gets the largest value in the given data
     const getGreatestValue = (): number => {
         let greatestValue: number = 0;
         for (let i: number = 0; i < data.length; i++) {
@@ -18,6 +20,7 @@ export default function Bars(): React.ReactElement {
         return greatestValue;
     };
 
+    // Renders given data into a JSX Component
     const renderData = () => {
         return (
             data.map((val: number, index: number) => (
@@ -28,15 +31,17 @@ export default function Bars(): React.ReactElement {
 
     const [bars, setBars] = useState(renderData);
 
+    // Async function allowing a delay without halting the entire site
     const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
+    // Handles the click of a testing button
     const handleButtonClick = async () => {
         let sortedData: number[][] = Insertion.sort(data);
 
         for (let i: number = 0; i < sortedData.length; i++) {
             data = sortedData[i];
             setBars(renderData);
-            await delay(1000);
+            await delay(100);
         }
     };
 
