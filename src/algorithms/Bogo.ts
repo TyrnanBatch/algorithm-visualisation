@@ -1,4 +1,4 @@
-import { Algorithm } from './Algorithm';
+import {Algorithm} from './Algorithm';
 
 class Bogo extends Algorithm {
     public static sort(array: number[]): number[] {
@@ -11,10 +11,10 @@ class Bogo extends Algorithm {
 
     // Randomly shuffles the array
     private static shuffle(array: number[]): void {
-        const n = array.length;
+        const n: number = array.length;
 
-        for (let i = n - 1; i > 0; i--) {
-            const j = Math.floor(Math.random()*i); // Generate a random index in [0, i]
+        for (let i: number = n - 1; i > 0; i--) {
+            const j: number = Math.floor(Math.random() * i); // Generate a random index in [0, i]
 
             this.swap(array, i, j);
         }
