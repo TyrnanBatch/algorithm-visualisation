@@ -1,12 +1,12 @@
 import './Bars.css';
 import React, {useState} from "react";
 import Bar from '../bar/Bar';
-import Bogo from "../../algorithms/Bogo";
+import Insertion from "../../algorithms/Insertion";
 
 export default function Bars(): React.ReactElement {
     // Temporary data to test with as no input for data has been made
     let data: number[] = [
-        367, 872, 654, 123, 409, 789, 234, 567, 890, 432, 678, 987, 321, 555, 876, 234, 456, 789, 100, 888
+        67, 872, 654, 123, 409, 789, 234, 567, 890, 432, 678, 987, 321, 555, 876, 234, 456, 789, 100, 888
     ];
 
     // Gets the largest value in the given data
@@ -36,7 +36,7 @@ export default function Bars(): React.ReactElement {
 
     // Handles the click of a testing button
     const handleButtonClick = async () => {
-        let sorted_data: number[][] = Bogo.sort(data);
+        let sorted_data: number[][] = Insertion.sort(data);
 
         for (let i: number = 0; i < sorted_data.length; i++) {
             data = sorted_data[i];
