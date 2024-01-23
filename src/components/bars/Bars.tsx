@@ -1,7 +1,7 @@
 import './Bars.css';
 import React, {useState} from "react";
 import Bar from '../bar/Bar';
-import Insertion from "../../algorithms/Insertion";
+import Bogo from "../../algorithms/Bogo";
 
 export default function Bars(): React.ReactElement {
     // Temporary data to test with as no input for data has been made
@@ -11,13 +11,13 @@ export default function Bars(): React.ReactElement {
 
     // Gets the largest value in the given data
     const getGreatestValue = (): number => {
-        let greatestValue: number = 0;
+        let greatest_value: number = 0;
         for (let i: number = 0; i < data.length; i++) {
-            if (data[i] > greatestValue) {
-                greatestValue = data[i];
+            if (data[i] > greatest_value) {
+                greatest_value = data[i];
             }
         }
-        return greatestValue;
+        return greatest_value;
     };
 
     // Renders given data into a JSX Component
@@ -36,10 +36,10 @@ export default function Bars(): React.ReactElement {
 
     // Handles the click of a testing button
     const handleButtonClick = async () => {
-        let sortedData: number[][] = Insertion.sort(data);
+        let sorted_data: number[][] = Bogo.sort(data);
 
-        for (let i: number = 0; i < sortedData.length; i++) {
-            data = sortedData[i];
+        for (let i: number = 0; i < sorted_data.length; i++) {
+            data = sorted_data[i];
             setBars(renderData);
             await delay(100);
         }

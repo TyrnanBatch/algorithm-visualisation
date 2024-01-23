@@ -1,8 +1,7 @@
 import {Algorithm} from './Algorithm';
 
 export default class Bogo extends Algorithm {
-    public static sort(array: number[]): number[] {
-        while (!this.check(array)) { // Checks if the array is sorted
+    public static sort(array: number[]): number[] {while (!this.check(array)) { // Checks if the array is sorted
             this.shuffle(array); // If the array is not sorted, shuffle it
         }
 
