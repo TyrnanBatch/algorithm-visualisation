@@ -1,6 +1,6 @@
 import {Algorithm} from './Algorithm';
 
-class Bubble extends Algorithm {
+export default class Bubble extends Algorithm {
     public static sort(array: number[]): number[] {
         while (!this.check(array)) {
             for (let i: number = 0; i < array.length - 1; i++) {
